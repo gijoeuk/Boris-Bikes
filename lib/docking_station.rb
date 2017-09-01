@@ -7,7 +7,7 @@ class DockingStation
   end
 
   def release_bike
-      if @bike_array.count > 0
+      if !self.empty?
         return @bike_array.last
       else
         fail "No bikes"
@@ -15,7 +15,7 @@ class DockingStation
   end
 
   def dock(bike)
-      if @bike_array.count > 19
+      if self.full?
         fail "docking station full"
       else
         @bike_array << bike
@@ -25,6 +25,16 @@ class DockingStation
 
   def bike
     @bike_array.last
+  end
+
+
+
+  def full?
+    @bike_array.count >= 20
+  end
+
+  def empty?
+    @bike_array.count == 0
   end
 
 end
