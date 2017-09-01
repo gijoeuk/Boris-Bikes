@@ -26,6 +26,13 @@ describe DockingStation do
 
   describe "#bike" do
 
+    it "shows a docked bike" do
+      bike = Bike.new
+      subject.dock(bike)
+      expect(subject.bike).to eq bike
+
+    end
+
 
 
 
