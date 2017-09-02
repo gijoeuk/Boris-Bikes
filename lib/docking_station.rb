@@ -2,6 +2,8 @@ require_relative 'bike'
 
 class DockingStation
 
+  DEFAULT_CAPACITY = 20
+
   def initialize
     @bike_array = []
   end
@@ -30,7 +32,7 @@ class DockingStation
 private
 
   def full?
-    @bike_array.count >= 20
+    @bike_array.count >= DEFAULT_CAPACITY
   end
 
   def empty?
