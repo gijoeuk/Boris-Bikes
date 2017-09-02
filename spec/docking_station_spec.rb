@@ -44,19 +44,6 @@ describe DockingStation do
       expect(subject.bike).to eq bike
     end
 
-    describe 'full?' do
-
-      it "returns true if DS is full" do
-      20.times{subject.dock Bike.new}
-      expect(subject.full?).to eq true
-      end
-    end
-
-    describe "empty?" do
-      it "returns true if DS is empty" do
-        expect(subject.empty?).to eq true
-      end
-    end
-
   end
+  
 end
